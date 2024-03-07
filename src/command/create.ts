@@ -2,6 +2,8 @@ import { input, select } from '@inquirer/prompts'
 import path from 'path'
 import fs from 'fs-extra'
 import { clone } from '../utils/clone'
+import { name, version } from '../../package.json'
+import axios, { AxiosResponse } from 'axios'
 export interface ITemplateInfo {
     name: string // 模板名称
     downloadUrl: string // 模板下载地址
@@ -17,6 +19,29 @@ export const templates: Map<string, ITemplateInfo> = new Map([
         branch: 'master'
     }]
 ])
+
+export const getNpmInfo = async (packageName: string) => {
+    const npmUrl = `https://registry.npmjs.org/${packageName}`
+    let res = {}
+    try {
+        res = await axios.get(npmUrl)
+    } catch(error) {
+        console.error(error)
+    }
+    return res
+}
+
+export const getNpmLatestVersion = async (packageName: string) => {
+    const { data } = (await getNpmInfo(packageName)) as AxiosResponse
+    return data['dist-tags'].latest
+}
+
+export const checkVersion = async (name: string, version: string) => {
+    const latestVersion = await getNpmLatestVersion(name)
+    if (latestVersion && version !== latestVersion) {
+        console.log(`当前版本${version}，最新版本${latestVersion}，请及时更新`)
+    }
+}
 
 export const create = async (dirName?: string) => {
     // 初始化模板列表
@@ -52,6 +77,10 @@ export const create = async (dirName?: string) => {
             return // 不做处理
         }
     }
+
+    // 检查版本更新
+    await checkVersion(name, version)
+
     const templateName = await select({
         message: '请选择模板',
         choices: template
