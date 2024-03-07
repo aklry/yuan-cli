@@ -28,6 +28,9 @@ devDependencies:
   '@types/fs-extra':
     specifier: ^11.0.4
     version: 11.0.4
+  '@types/lodash':
+    specifier: ^4.14.202
+    version: 4.14.202
   axios:
     specifier: ^1.6.7
     version: 1.6.7
@@ -37,6 +40,9 @@ devDependencies:
   fs-extra:
     specifier: ^11.2.0
     version: 11.2.0
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   progress-estimator:
     specifier: ^0.3.1
     version: 0.3.1
@@ -436,6 +442,10 @@ packages:
     resolution: {integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==}
     dependencies:
       '@types/node': 20.11.25
+    dev: true
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
     dev: true
 
   /@types/mute-stream@0.0.4:
@@ -838,6 +848,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       p-locate: 4.1.0
+    dev: true
+
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
 
   /log-update@2.3.0:

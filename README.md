@@ -13,7 +13,7 @@
 ## 安装
 
 ```bash
-pnpm install -g yuan-cli
+pnpm install -g aklry-cli
 ```
 
 ## 使用

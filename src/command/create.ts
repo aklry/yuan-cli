@@ -1,9 +1,11 @@
 import { input, select } from '@inquirer/prompts'
 import path from 'path'
+import chalk from 'chalk'
 import fs from 'fs-extra'
 import { clone } from '../utils/clone'
 import { name, version } from '../../package.json'
 import axios, { AxiosResponse } from 'axios'
+import { gt } from 'lodash'
 export interface ITemplateInfo {
     name: string // 模板名称
     downloadUrl: string // 模板下载地址
@@ -38,9 +40,12 @@ export const getNpmLatestVersion = async (packageName: string) => {
 
 export const checkVersion = async (name: string, version: string) => {
     const latestVersion = await getNpmLatestVersion(name)
-    if (latestVersion && version !== latestVersion) {
-        console.log(`当前版本${version}，最新版本${latestVersion}，请及时更新`)
+    const need = gt(latestVersion, version)
+    if (need) {
+        console.warn(`当前版本${chalk.blueBright(version)}，最新版本${chalk.greenBright(latestVersion)}，请及时更新`)
+        console.log(`更新命令：${chalk.greenBright(`pnpm install -g ${name}@latest`)} 或者${chalk.greenBright(`yuan update`)}`)
     }
+    return need
 }
 
 export const create = async (dirName?: string) => {
