@@ -15,9 +15,15 @@ export interface ITemplateInfo {
 }
 
 export const templates: Map<string, ITemplateInfo> = new Map([
-    ['Vue3 + Vite + TypeScript-template', {
-        name: 'Vue3 + Vite + TypeScript',
+    ['Vue3 + Vite + TypeScript + Element Plus-template-01', {
+        name: 'Vue3 + Vite + TypeScript + Element Plus',
         downloadUrl: 'https://github.com/aklry/admin-pro.git',
+        description: 'Vue3 + Vite + TypeScript企业级中后台模板',
+        branch: 'master'
+    }],
+    ['Vue3 + Vite + TypeScript + Element Plus-template-02', {
+        name: 'Vue3 + Vite + TypeScript + Element Plus',
+        downloadUrl: 'https://gitee.com/liu-ruiyuan/cms.git',
         description: 'Vue3 + Vite + TypeScript企业级中后台模板',
         branch: 'master'
     }]
