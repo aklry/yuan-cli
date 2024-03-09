@@ -1,6 +1,6 @@
 import chalk from "chalk"
 import process from 'child_process'
-import ora from "ora"
+import ora from 'ora'
 
 const spinner = ora({
     text: 'Updating...',
