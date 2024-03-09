@@ -11,7 +11,7 @@ const spinner = ora({
     color: 'yellow'
 })
 
-export const update = async (dirName: string) => {
+export const update = async () => {
     spinner.start()
     process.exec('npm install -g aklry-cli@latest', (error) => {
         spinner.stop()
