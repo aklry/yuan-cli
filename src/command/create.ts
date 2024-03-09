@@ -50,7 +50,7 @@ export const checkVersion = async (name: string, version: string) => {
     const need = gt(latestVersion, version)
     if (need) {
         log.warning(`当前版本${chalk.blueBright(version)}，最新版本${chalk.greenBright(latestVersion)}，请及时更新`)
-        log.info(`更新命令：${chalk.greenBright(`pnpm install -g ${name}@latest`)} 或者${chalk.greenBright(`yuan update`)}`)
+        log.info(`更新命令：${chalk.greenBright(`npm install -g ${name}@latest`)} 或者${chalk.greenBright(`yuan update`)}`)
     }
     return need
 }
