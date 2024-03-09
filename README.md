@@ -1,4 +1,4 @@
-# yuan-cli
+# aklry-cli
 
 ![npm 版本](https://img.shields.io/badge/yuan-cli_v0.0.1-green)
 
@@ -20,13 +20,13 @@ pnpm install -g aklry-cli
 
 ```bash
 # 使用命令创建模板(新项目)
-yuan-cli create
-yuan-cli create [projectName]
+yuan create
+yuan create [projectName]
 ```
 
 ## 查看脚手架版本
 
 ```bash
-yuan-cli -v
-yuan-cli --version
+yuan -v
+yuan --version
 ```
