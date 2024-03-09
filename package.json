@@ -1,6 +1,6 @@
 {
   "name": "aklry-cli",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "yuan-cli 脚手架",
   "main": "index.js",
   "scripts": {
