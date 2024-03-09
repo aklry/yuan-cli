@@ -1,6 +1,8 @@
 import simpleGit, {SimpleGitOptions} from 'simple-git'
 import createLogger from 'progress-estimator'
 import chalk from 'chalk'
+import log from '../utils/log'
+const figlet = require('figlet')
 
 // 初始化进度条
 const logger = createLogger({
@@ -9,6 +11,13 @@ const logger = createLogger({
         frames: ['-', '-', '-', '-'].map(item => chalk.green(item))
     }
 })
+
+const greaterPrinter = async () => {
+   await figlet('aklry-cli', (error: any, data: any) => {
+    console.log(data)
+   })
+}
+
 const gitOptions: Partial<SimpleGitOptions> = {
     baseDir: process.cwd(),
     binary: 'git',
@@ -22,14 +31,14 @@ export const clone = async (url: string, projectName: string, options: string[])
         })
         // 下面就是一些相关的提示
     console.log()
-    console.log(chalk.blueBright(`==================================`))
-    console.log(chalk.blueBright(`=== 欢迎使用 yuan-cli 脚手架 ===`))
-    console.log(chalk.blueBright(`=== cd ${projectName} ===`))
-    console.log(chalk.blueBright(`=== pnpm install ===`))
-    console.log(chalk.blueBright(`=== pnpm run dev ===`))
-    console.log(chalk.blueBright(`==================================`))
-    console.log()
-    } catch(error) {
-        console.error(error)
+    log.success(chalk.blueBright(`==================================`))
+    log.success(chalk.blueBright(`=== 欢迎使用 yuan-cli 脚手架 ===`))
+    log.info(chalk.blueBright(`=== cd ${projectName} ===`))
+    log.info(chalk.blueBright(`=== pnpm install ===`))
+    log.info(chalk.blueBright(`=== pnpm run dev ===`))
+    log.success(chalk.blueBright(`==================================`))
+    greaterPrinter()
+    } catch(error: string | any) {
+        log.error(error)
     }
 }
