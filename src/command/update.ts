@@ -13,7 +13,7 @@ const spinner = ora({
 
 export const update = async () => {
     spinner.start()
-    process.exec('npm install -g aklry-cli@latest', (error) => {
+    process.exec('npm install aklry-cli@latest -g', (error) => {
         spinner.stop()
         if (!error) {
             console.log(chalk.greenBright('更新成功'))

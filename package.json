@@ -1,7 +1,7 @@
 {
   "name": "aklry-cli",
   "version": "0.2.5",
-  "description": "yuan-cli 脚手架",
+  "description": "aklry-cli 脚手架",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
