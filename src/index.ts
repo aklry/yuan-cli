@@ -6,7 +6,7 @@ import { update } from './command/update'
 const program = new Command('yuan')
 program.version(version, '-v, --version', 'output the current version')
 
-program.command('update').description('更新脚手架 yuan-cli').action(async () => {
+program.command('update').description('更新脚手架 aklry-cli').action(async () => {
     await update()
 })
 
