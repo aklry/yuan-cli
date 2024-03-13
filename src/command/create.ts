@@ -26,6 +26,12 @@ export const templates: Map<string, ITemplateInfo> = new Map([
         downloadUrl: 'https://gitee.com/liu-ruiyuan/cms.git',
         description: 'Vue3 + Vite + TypeScript企业级中后台模板',
         branch: 'master'
+    }],
+    ['Vue3 + Vite + TypeScript + Vant-H5_template', {
+        name: 'Vue3 + Vite + TypeScript + Vant',
+        downloadUrl: 'https://gitee.com/liu-ruiyuan/ry-seek-friend_fronted.git',
+        description: 'Vue3 + Vite + TypeScript H5模板',
+        branch: 'template'
     }]
 ])
 
