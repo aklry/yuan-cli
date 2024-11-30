@@ -1,53 +1,53 @@
 {
-  "name": "aklry-cli",
-  "version": "0.2.8",
-  "description": "aklry-cli 脚手架",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
-  },
-  "keywords": [
-    "Vue",
-    "Vite",
-    "TypeScript",
-    "Element-plus"
-  ],
-  "author": "yuan",
-  "license": "ISC",
-  "bin": {
-    "yuan": "bin/index.js"
-  },
-  "files": [
-    "bin",
-    "dist",
-    "README.md"
-  ],
-  "devDependencies": {
-    "@inquirer/prompts": "^4.1.0",
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@types/figlet": "^1.5.8",
-    "@types/fs-extra": "^11.0.4",
-    "@types/lodash": "^4.14.202",
-    "axios": "^1.6.7",
-    "chalk": "^4.1.2",
-    "figlet": "^1.7.0",
-    "fs-extra": "^11.2.0",
-    "lodash": "^4.17.21",
-    "log-symbols": "4.1.0",
-    "ora": "5",
-    "progress-estimator": "^0.3.1",
-    "rollup": "^4.12.1",
-    "rollup-plugin-node-externals": "^5.1.2",
-    "rollup-plugin-typescript2": "^0.36.0",
-    "simple-git": "^3.22.0",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "commander": "^12.0.0"
-  }
+	"name": "aklry-cli",
+	"version": "0.2.8",
+	"description": "aklry-cli 脚手架",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "rollup -c rollup.config.js --bundleConfigAsCjs"
+	},
+	"keywords": [
+		"Vue",
+		"Vite",
+		"TypeScript",
+		"Element-plus"
+	],
+	"author": "yuan",
+	"license": "ISC",
+	"bin": {
+		"yuan": "bin/index.js"
+	},
+	"files": [
+		"bin",
+		"dist",
+		"README.md"
+	],
+	"devDependencies": {
+		"@inquirer/prompts": "^4.1.0",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@types/figlet": "^1.5.8",
+		"@types/fs-extra": "^11.0.4",
+		"@types/lodash": "^4.14.202",
+		"axios": "^1.6.7",
+		"chalk": "^4.1.2",
+		"figlet": "^1.7.0",
+		"fs-extra": "^11.2.0",
+		"lodash": "^4.17.21",
+		"log-symbols": "4.1.0",
+		"ora": "5",
+		"progress-estimator": "^0.3.1",
+		"rollup": "^4.12.1",
+		"rollup-plugin-node-externals": "^5.1.2",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"simple-git": "^3.22.0",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"commander": "^12.0.0"
+	}
 }
