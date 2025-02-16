@@ -41,6 +41,15 @@ export const templates: Map<string, ITemplateInfo> = new Map([
 			description: 'Vue3 + Vite + TypeScript H5模板',
 			branch: 'template'
 		}
+	],
+	[
+		'Vue3 + Vite + TypeScript + uview-plus_template',
+		{
+			name: 'Vue3 + Vite + TypeScript + uview-plus',
+			downloadUrl: 'https://github.com/aklry/uni-template.git',
+			description: 'uniapp 移动端模板',
+			branch: 'master'
+		}
 	]
 ])
 
