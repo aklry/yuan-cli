@@ -3,6 +3,10 @@ import createLogger from 'progress-estimator'
 import chalk from 'chalk'
 import log from '../utils/log'
 import figlet from 'figlet'
+// @ts-ignore
+import standard from 'figlet/importable-fonts/Standard.js'
+
+figlet.parseFont('Standard', standard)
 
 // 初始化进度条
 const logger = createLogger({
@@ -13,8 +17,12 @@ const logger = createLogger({
 })
 
 const greaterPrinter = () => {
-	figlet('aklry-cli', (error: any, data: any) => {
-		console.log(data)
+	figlet.text('aklry-cli', { font: 'Standard' }, (error: any, data: any) => {
+		if (error) {
+			console.log(error)
+		} else {
+			console.log(chalk.green(data))
+		}
 	})
 }
 
@@ -23,7 +31,7 @@ const gitOptions: Partial<SimpleGitOptions> = {
 	binary: 'git',
 	maxConcurrentProcesses: 6
 }
-export const clone = async (url: string, projectName: string, options: string[]) => {
+const clone = async (url: string, projectName: string, options: string[]) => {
 	const git = simpleGit(gitOptions)
 	try {
 		await logger(git.clone(url, projectName, options), '正在下载模板', {
@@ -42,3 +50,5 @@ export const clone = async (url: string, projectName: string, options: string[])
 		log.error(error)
 	}
 }
+
+export default clone

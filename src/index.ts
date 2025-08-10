@@ -1,10 +1,9 @@
 import { Command } from 'commander'
-import { version } from '../package.json'
-import { create } from './command/create'
-import { update } from './command/update'
+import { create, update, addCpnAction, helpOptions } from './core'
 
 const program = new Command('yuan')
-program.version(version, '-v, --version', 'output the current version')
+
+helpOptions(program)
 
 program
 	.command('update')
@@ -24,5 +23,10 @@ program
 			console.log(dirName)
 		}
 	})
+program
+	.command('add-cpn <cpnname> [...others]')
+	.description('add a new vue component to the project, for example: yuan add-cpn my-component -d src/components')
+	.action((cpnName: string) => addCpnAction(cpnName, program))
 
-program.parse()
+// 让commander解析命令行参数
+program.parse(process.argv)

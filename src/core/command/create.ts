@@ -2,11 +2,10 @@ import { input, select } from '@inquirer/prompts'
 import path from 'path'
 import chalk from 'chalk'
 import fs from 'fs-extra'
-import { clone } from '../utils/clone'
-import { name, version } from '../../package.json'
+import { clone, log } from '../../utils'
+import { name, version } from '../../../package.json'
 import axios, { AxiosResponse } from 'axios'
 import { gt } from 'lodash'
-import log from '../utils/log'
 export interface ITemplateInfo {
 	name: string // 模板名称
 	downloadUrl: string // 模板下载地址

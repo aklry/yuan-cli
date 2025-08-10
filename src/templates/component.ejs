@@ -1,0 +1,18 @@
+<script setup>
+	import { ref } from 'vue'
+	const name = ref('component-container')
+</script>
+<template>
+	<div class="<%= lowerCaseCpnName%>">
+		<h1>
+			<%= cpnName%>:{{ name }}
+		</h1>
+	</div>
+</template>
+<style scoped>
+	.<%=lowerCaseCpnName%> {
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+	}
+</style>
