@@ -1,6 +1,6 @@
 # aklry-cli
 
-![npm 版本](https://img.shields.io/badge/yuan-cli_v0.4.1-green)
+![npm 版本](https://img.shields.io/badge/aklry-cli_v0.4.2-green)
 
 ## 简介
 
