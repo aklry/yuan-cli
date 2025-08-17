@@ -23,8 +23,13 @@ export default defineConfig([
                 return null
             }
         },
+        external: [
+            'cpu-features'
+        ],
         plugins: [
-            nodeResolve(),
+            nodeResolve({
+                preferBuiltins: true
+            }),
             commonjs(),
             externals({
                 deps: false
