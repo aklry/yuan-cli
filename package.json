@@ -1,6 +1,6 @@
 {
 	"name": "aklry-cli",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "aklry-cli 脚手架",
 	"main": "index.js",
 	"scripts": {
